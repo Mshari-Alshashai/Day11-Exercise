@@ -5,6 +5,8 @@ public class Main {
         Account a2= new Account("1112358822","Majid");
 
         a2.setBalance(1700);
+        a2.setName("Mohammed");
+        a1.setId("1234567890");
         a1.credit(120);
         a1.debit(180);
         a1.transferTo(a2,300);
@@ -18,6 +20,8 @@ public class Main {
 
         Employee e1 = new Employee("Waleed","1123154466",9000);
 
+        e1.setName("Ahmed");
+        e1.setId("1112223330");
         e1.setSalary(10000);
         e1.raisedSalary(20);
         System.out.println(e1.toString());
