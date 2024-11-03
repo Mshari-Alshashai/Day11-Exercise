@@ -39,12 +39,12 @@ public class Account {
     }
 
     public int credit(int amount){
-        balance=balance - amount;
+        balance=balance + amount;
         return balance;
     }
 
     public int debit(int amount){
-        balance=balance + amount;
+        balance=balance - amount;
         return balance;
     }
 
