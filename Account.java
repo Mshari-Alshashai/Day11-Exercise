@@ -39,19 +39,21 @@ public class Account {
     }
 
     public int credit(int amount){
-        balance=balance + amount;
+        if (amount>=0)balance=balance + amount;
         return balance;
     }
 
     public int debit(int amount){
-        balance=balance - amount;
+        if (balance>=amount && amount>0)balance=balance - amount;
         return balance;
     }
 
     public String transferTo(Account a2,int amount){
-        balance=balance-amount;
-        a2.balance=a2.balance+amount;
-        return "The transfer has been completed";
+        if (balance>=amount && amount>=0){
+            balance=balance-amount;
+            a2.balance=a2.balance+amount;
+            return "The transfer has been completed";}
+        else return "There was a problem with the process";
     }
 
     public String toString(){
